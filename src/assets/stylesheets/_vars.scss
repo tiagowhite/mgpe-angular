@@ -1,0 +1,18 @@
+/* Fonts */
+$font-family-mgpe-mono:                         'Roboto', sans-serif;;
+
+$text-shadow-light: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+
+/* Colors */
+
+$mp-offwhite: #fafafa;
+$mp-gray-0: rgba(52,66,82,1);
+$mp-gray-1: rgba(52, 66, 82, 0.3);
+$mp-gray-2: rgba(38, 50, 56, 0.3);
+
+
+$mp-light-blue-0: rgba(205, 215, 219, 1);
+$mp-soft-blue-0:  #7B94A2;
+$mp-soft-blue-1:  #607d8b;
+/* Gradients */
+$mp-dark-gray-linear-gradient: linear-gradient(-135deg, $mp-gray-1 0%, $mp-gray-2 50%, $mp-gray-1 50%, $mp-gray-2 100%);

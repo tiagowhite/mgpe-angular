@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'icon';
+  src: url('/assets/fonts/icon.eot?9xisvb');
+  src: url('/assets/fonts/icon.eot?9xisvb#iefix') format('embedded-opentype'),
+  url('/assets/fonts/icon.ttf?9xisvb') format('truetype'),
+  url('/assets/fonts/icon.woff?9xisvb') format('woff'),
+  url('/assets/fonts/icon.svg?9xisvb#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon', serif !important;
+  font-size: 2.2em;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-desassociar:before {
+  content: "\e95c";
+}
+
+.icon-colapso:before {
+  content: "\e95a";
+}
+
+.icon-expandir:before {
+  content: "\e95b";
+}
+
+.icon-promotor:before {
+  content: "\e959";
+}
+
+.icon-documento-inativar:before {
+  content: "\e958";
+}
+
+.icon-documento-ativar:before {
+  content: "\e957";
+}
+
+.icon-fechar-circulo:before {
+  content: "\e956";
+}
+
+.icon-alerta:before {
+  content: "\e935";
+}
+
+.icon-balanca:before {
+  content: "\e923";
+}
+
+.icon-menos:before {
+  content: "\e955";
+}
+
+.icon-trocar:before {
+  content: "\e954";
+}
+
+.icon-promocao:before {
+  content: "\e953";
+}
+
+.icon-distribuir:before {
+  content: "\e94f";
+}
+
+.icon-cards:before {
+  content: "\e94d";
+}
+
+.icon-relogio:before {
+  content: "\e94e";
+}
+
+.icon-deletar:before {
+  content: "\e94c";
+}
+
+.icon-despacho:before {
+  content: "\e951";
+}
+
+.icon-pdf:before {
+  content: "\e94b";
+}
+
+.icon-processos:before {
+  content: "\e94a";
+}
+
+.icon-video-aula:before {
+  content: "\e949";
+}
+
+.icon-solicitar-licenca-especial:before {
+  content: "\e948";
+}
+
+.icon-preferencias:before {
+  content: "\e945";
+}
+
+.icon-solicitar-auxilio:before {
+  content: "\e947";
+}
+
+.icon-indice-ferias:before {
+  content: "\e950";
+}
+
+.icon-home:before {
+  content: "\e946";
+}
+
+.icon-novo:before {
+  content: "\e943";
+}
+
+.icon-cancelar:before {
+  content: "\e944";
+}
+
+.icon-solicitar:before {
+  content: "\e942";
+}
+
+.icon-check-circulo:before {
+  content: "\e93e";
+}
+
+.icon-arquivo-classe:before {
+  content: "\e93f";
+}
+
+.icon-arquivo-numero:before {
+  content: "\e940";
+}
+
+.icon-arquivo:before {
+  content: "\e941";
+}
+
+.icon-reload:before {
+  content: "\e93d";
+}
+
+.icon-fechar:before {
+  content: "\e936";
+}
+
+.icon-salvar:before {
+  content: "\e938";
+}
+
+.icon-livro-marcado:before {
+  content: "\e939";
+}
+
+.icon-editar:before {
+  content: "\e93a";
+}
+
+.icon-globo:before {
+  content: "\e93b";
+}
+
+.icon-pasta:before {
+  content: "\e93c";
+}
+
+.icon-olho:before {
+  content: "\e937";
+}
+
+.icon-arquivo-exportar:before {
+  content: "\e927";
+}
+
+.icon-arquivo-importar:before {
+  content: "\e928";
+}
+
+.icon-play:before {
+  content: "\e933";
+}
+
+.icon-abrir-nova-janela:before {
+  content: "\e934";
+}
+
+.icon-data-science:before {
+  content: "\e932";
+}
+
+.icon-lista-marcada:before {
+  content: "\e931";
+}
+
+.icon-chevron-cima:before {
+  content: "\e92b";
+}
+
+.icon-chevron-direita:before {
+  content: "\e92c";
+}
+
+.icon-chevron-esquerda:before {
+  content: "\e92d";
+}
+
+.icon-chevron-baixo:before {
+  content: "\e92e";
+}
+
+.icon-borracha:before {
+  content: "\e930";
+}
+
+.icon-ajuda:before {
+  content: "\e921";
+}
+
+.icon-abrir-nova-aba:before {
+  content: "\e922";
+}
+
+.icon-abrir-email:before {
+  content: "\e925";
+}
+
+.icon-email:before {
+  content: "\e926";
+}
+
+.icon-seta-baixo-direita:before {
+  content: "\e929";
+}
+
+.icon-seta-cima-direita:before {
+  content: "\e92a";
+}
+
+.icon-logo-mgpe:before {
+  content: "\e91d";
+}
+
+.icon-extrajudicial:before {
+  content: "\e995";
+}
+
+.icon-judicial:before {
+  content: "\e996";
+}
+
+.icon-secretaria:before {
+  content: "\e997";
+}
+
+.icon-pcerj:before {
+  content: "\e924";
+}
+
+.icon-logo-aplicacoes:before {
+  content: "\e920";
+}
+
+.icon-busca-documento:before {
+  content: "\e91f";
+}
+
+.icon-nova-logo-mgpe:before {
+  content: "\e952";
+}
+
+.icon-notification:before {
+  content: "\e91e";
+}
+
+.icon-exportar:before {
+  content: "\e91c";
+}
+
+.icon-consulta:before {
+  content: "\e91b";
+}
+
+.icon-comprovacao-auxilio-consulta:before {
+  content: "\e91a";
+}
+
+.icon-anexar:before {
+  content: "\e919";
+}
+
+.icon-comprovacao-auxilio-listagem:before {
+  content: "\e918";
+}
+
+.icon-dependente:before {
+  content: "\e917";
+}
+
+.icon-comprovacao-auxilio:before {
+  content: "\e916";
+}
+
+.icon-sair:before {
+  content: "\e915";
+}
+
+.icon-menu:before {
+  content: "\e914";
+}
+
+.icon-logo-rhferias:before {
+  content: "\e913";
+}
+
+.icon-user:before {
+  content: "\e911";
+}
+
+.icon-star:before {
+  content: "\e912";
+}
+
+.icon-dashboard:before {
+  content: "\e900";
+}
+
+.icon-logo-mprj:before {
+  content: "\e910";
+}
+
+.icon-prh:before {
+  content: "\e901";
+}
+
+.icon-comprovacao:before {
+  content: "\e903";
+}
+
+.icon-relatorio:before {
+  content: "\e902";
+}
+
+.icon-requerimento-auxilio:before {
+  content: "\e904";
+}
+
+.icon-requerimento-comissao:before {
+  content: "\e905";
+}
+
+.icon-requerimento-subplanejamento:before {
+  content: "\e906";
+}
+
+.icon-solicitacao:before {
+  content: "\e907";
+}
+
+.icon-disponibilizacao-saude:before {
+  content: "\e908";
+}
+
+.icon-movimentacao:before {
+  content: "\e909";
+}
+
+.icon-acoes-permitidas:before {
+  content: "\e90a";
+}
+
+.icon-calendar:before {
+  content: "\e92f";
+}
+
+.icon-periodo:before {
+  content: "\e90b";
+}
+
+.icon-renunciar:before {
+  content: "\e90c";
+}
+
+.icon-licenca-especial:before {
+  content: "\e90d";
+}
+
+.icon-cancelar-ferias:before {
+  content: "\e90e";
+}
+
+.icon-marcar-ferias:before {
+  content: "\e90f";
+}
+  
+
+  
+  
+

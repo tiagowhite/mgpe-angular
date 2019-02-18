@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Variables */
+@import "assets/stylesheets/vars";
+
+/* Mixins */
+@import "assets/stylesheets/mixins";
+
+/* Typography */
+@import "assets/stylesheets/typography";
+
+/* Icons */
+@import "assets/stylesheets/icons";
+@import "assets/stylesheets/mgpe-icons";
+
+/* Animate.css */
+@import "../node_modules/animate.css";
+
+/* Bootsrap */
+@import "~bootstrap/scss/bootstrap";
+
+/* Material design lite*/
+@import "~material-design-lite/material.min.css";
+
+/* Structure */
+@import "assets/stylesheets/mgpe";
+@import "assets/stylesheets/media-queries";
+
+
+
