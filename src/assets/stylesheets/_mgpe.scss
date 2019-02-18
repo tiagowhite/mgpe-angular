@@ -36,6 +36,17 @@ html, body {
     outline: 1px solid slategrey;
   }
 
+  app-profile {
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+
+    .hamburger, .notification {
+      button { color: white;}
+    }
+  }
+
   app-navbar > div > app-menu {
     background: $mp-gray-0;
     background: $mp-dark-gray-linear-gradient;
@@ -103,19 +114,22 @@ html, body {
       line-height: 2em;
       text-indent: 7px;
     }
-
     .mat-tab-group.mat-primary .mat-ink-bar {
-      background: #cfd8dc;
+      background: $mp-offwhite;
+    }
+    .mat-tab-label {
+      color: rgba(255, 255, 255, 0.87) !important;
     }
   }
 
 
   app-logo {
+    background: $mp-dark-gray-linear-gradient;
     i {
       color: $mp-offwhite;
       padding: 0;
       margin: 0 auto;
-      font-size: 10em;
+      font-size: 12em;
       text-align: center;
       text-decoration: none;
       text-shadow: $text-shadow-light;
@@ -142,6 +156,4 @@ html, body {
   }
 }
 
-.mat-tab-label {
-  color: rgba(255, 255, 255, 0.87) !important;
-}
+
