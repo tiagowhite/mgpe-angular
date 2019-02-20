@@ -7,6 +7,23 @@ html, body {
   padding: 0;
 }
 
+.mdl-layout.stashed {
+  & > #content {
+    margin-left: 100px !important;
+  }
+
+  & > #sidebar {
+    width: 100px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  & > #sidebar > app-navbar-stashed {
+    /*transform: translate3d(-100%, 0, 0);
+    visibility: visible;*/
+  }
+}
+
 #content {
   min-height: 100%;
   padding: 0;
@@ -15,6 +32,7 @@ html, body {
   margin-left: 320px;
   background: $mp-light-blue-0;
 }
+
 
 #sidebar {
   width: 320px;
@@ -27,39 +45,81 @@ html, body {
   &::-webkit-scrollbar {
     width: .3em;
   }
+
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: #ccc;
     outline: 1px solid slategrey;
   }
 
-  app-profile {
-    width: 100%;
-    padding: 7px;
-    display: flex;
-    justify-content: space-between;
+  app-logo {
+    background: $mp-dark-gray-linear-gradient;
 
-    .hamburger, .notification {
-      button { color: white;}
+    i {
+      color: $mp-offwhite;
+      padding: 0;
+      margin: 0 auto;
+      font-size: 12em;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: $text-shadow-light;
+      display: block;
     }
+
+    .icon-logo-mprj {
+      margin-top: 20px;
+      line-height: 20px;
+    }
+
+    .icon-logo-mgpe {
+      margin-top: 20px;
+      text-shadow: none;
+    }
+
+    p {
+      color: $mp-offwhite;
+      padding: 5% 15%;
+      margin-top: 2em;
+      text-align: center;
+      line-height: 1.2em;
+    }
+
+    app-profile {
+      width: 100%;
+      margin-top: 2.5em;
+      padding: 7px;
+      display: flex;
+      justify-content: space-between;
+
+      .hamburger, .notification {
+        button {
+          color: white;
+        }
+      }
+    }
+
   }
+
 
   app-navbar > div > app-menu {
     background: $mp-gray-0;
     background: $mp-dark-gray-linear-gradient;
 
     min-width: 100%;
-    .mat-expansion-panel a i  {
+
+    .mat-expansion-panel a i {
       margin-right: .3em;
     }
+
     .mat-expansion-panel a mat-icon {
       margin-right: .3em;
     }
 
-    .mat-expansion-panel:nth-child(3){
+    .mat-expansion-panel:nth-child(3) {
       background: $mp-soft-blue-1;
     }
 
@@ -72,12 +132,15 @@ html, body {
     .mat-expansion-panel-header-title {
       color: $mp-soft-blue-0 !important;
     }
+
     .mat-expansion-indicator::after {
       color: $mp-soft-blue-1 !important;
     }
+
     .mat-expansion-panel-spacing {
       margin: 0 !important;
     }
+
     .mat-expansion-panel-body {
       padding: 0 !important;
       background: rgba(0, 0, 0, 0.3);
@@ -114,46 +177,16 @@ html, body {
       line-height: 2em;
       text-indent: 7px;
     }
+
     .mat-tab-group.mat-primary .mat-ink-bar {
       background: $mp-offwhite;
     }
+
     .mat-tab-label {
       color: rgba(255, 255, 255, 0.87) !important;
     }
   }
 
-
-  app-logo {
-    background: $mp-dark-gray-linear-gradient;
-    i {
-      color: $mp-offwhite;
-      padding: 0;
-      margin: 0 auto;
-      font-size: 12em;
-      text-align: center;
-      text-decoration: none;
-      text-shadow: $text-shadow-light;
-      display: block;
-    }
-
-    .icon-logo-mprj {
-      margin-top: 20px;
-      line-height: 20px;
-    }
-
-    .icon-logo-mgpe {
-      margin-top: 20px;
-      text-shadow: none;
-    }
-
-    p {
-      color: $mp-offwhite;
-      padding: 5% 15%;
-      margin-top: 2em;
-      text-align: center;
-      line-height: 1.2em;
-    }
-  }
 }
 
 

@@ -1,6 +1,7 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer" [ngClass]="state">
   <aside id="sidebar" class="mdl-layout__drawer">
-    <app-navbar></app-navbar>
+    <app-navbar [@navbarState]="state"></app-navbar>
+    <app-navbar-stashed></app-navbar-stashed>
   </aside>
   <main id="content" class="mdl-layout__content">
     <router-outlet></router-outlet>

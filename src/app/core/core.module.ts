@@ -12,9 +12,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from './material.module';
+import {NavbarService} from './services/navbar.service';
+import { NavbarStashedComponent } from './navbar-stashed/navbar-stashed.component';
 
 @NgModule({
-  declarations: [HeaderComponent, MenuComponent, FooterComponent, DashboardComponent, LogoComponent, NavbarComponent, ProfileComponent],
+  declarations: [HeaderComponent, MenuComponent, FooterComponent, DashboardComponent, LogoComponent, NavbarComponent, ProfileComponent, NavbarStashedComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -35,9 +37,11 @@ import { MaterialModule } from './material.module';
     DashboardComponent,
     LogoComponent,
     NavbarComponent,
+    NavbarStashedComponent,
     ProfileComponent,
     MaterialModule
-  ]
+  ],
+  providers: [NavbarService]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

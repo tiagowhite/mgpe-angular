@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavbarService} from '../services/navbar.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  message: boolean;
+
+  constructor(private navbarService: NavbarService) {
+  }
 
   ngOnInit() {
+    this.navbarService.currentMessage.subscribe(message => this.message = message);
   }
+
+  stash(state: boolean): void {
+    this.navbarService.changeMessage(state);
+  }
+
 
 }
