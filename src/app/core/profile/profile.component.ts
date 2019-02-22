@@ -17,8 +17,9 @@ export class ProfileComponent implements OnInit {
     this.navbarService.currentMessage.subscribe(message => this.message = message);
   }
 
-  stash(state: boolean): void {
+  stash(state: boolean): boolean {
     this.navbarService.changeMessage(state);
+    return state;
   }
 
 

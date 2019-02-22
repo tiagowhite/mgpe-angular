@@ -12,10 +12,11 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('stashed', style({
+        transform: 'translate3d(-100%, 0, 0)',
         visibility: 'hidden',
-        transform: 'translate3d(-100%, 0, 0)'
+        display: 'none'
       })),
-      transition('normal <=> stashed', animate('250ms cubic-bezier(0.895, 0.03, 0.685, 0.22)'))
+      transition('normal <=> stashed', animate('300ms cubic-bezier(0.895, 0.03, 0.685, 0.22)'))
     ])
   ]
 })

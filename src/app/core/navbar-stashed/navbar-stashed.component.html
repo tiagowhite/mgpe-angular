@@ -1,122 +1,99 @@
 <div class="navbar-stashed">
   <app-profile></app-profile>
 
-  <mat-tab-group>
-    <mat-tab label="main">
-      <ng-template mat-tab-label>
-        <i class="icon icon-user"></i>
-      </ng-template>
+  <div class="menu-stashded-principal">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon matTooltip="Acervo" matTooltipPosition="right">local_library</mat-icon>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a routerLink="/">
+        <mat-icon class="icon icon-arquivo-importar" matTooltip="Importar processo" matTooltipPosition="right"></mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon class="icon icon-arquivo-importar" matTooltip="Lista de processos" matTooltipPosition="right"></mat-icon>
+      </a>
+    </mat-expansion-panel>
 
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon matTooltip="Triagem" matTooltipPosition="right">local_library</mat-icon>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <a routerLink="/">
-          <i class="icon icon-arquivo-importar"></i>
-          <span>Importar processos</span>
-        </a>
-        <a routerLink="/">
-          <i class="icon icon-arquivo-importar"></i>
-          <span>Lista de processos</span>
-        </a>
-      </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon matTooltip="Judicial" matTooltipPosition="right">account_balance</mat-icon>
+          <!--<span>Judicial</span>-->
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a routerLink="/">
+        <mat-icon class="icon icon-logo-aplicacoes" matTooltip="Painel informativo 1º grau" matTooltipPosition="right"></mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon class="icon icon-logo-aplicacoes" matTooltip="Painel informativo 2º grau" matTooltipPosition="right"></mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon class="icon icon-relatorio" matTooltip="Intimações 1º grau" matTooltipPosition="right"></mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon class="icon icon-relatorio" matTooltip="Intimações 2º grau" matTooltipPosition="right"></mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Pauta audiência futura" matTooltipPosition="right">library_books</mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Distribuição 1º grau" matTooltipPosition="right">filter_1</mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Distribuição 2º grau" matTooltipPosition="right">filter_2</mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Sugestão para distribuição 2º grau" matTooltipPosition="right">person_pin</mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Movimentos 1º grau" matTooltipPosition="right">forum</mat-icon>
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Movimentos 2º grau" matTooltipPosition="right">forum</mat-icon>
+      </a>
+    </mat-expansion-panel>
+  </div>
 
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon matTooltip="Judicial" matTooltipPosition="right">account_balance</mat-icon>
-            <span>Judicial</span>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <a routerLink="/">
-          <i class="icon icon-logo-aplicacoes"></i>
-          <span>Painel informativo 2º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="icon icon-logo-aplicacoes"></i>
-          <span>Painel informativo 1º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="icon icon-relatorio"></i>
-          <span>Intimações 2º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="icon icon-relatorio"></i>
-          <span>Intimações 1º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Pauta audiência futura</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Distribuição 1º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Distribuição 2º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Sugestão para distribuição 2º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Movimentos 1º grau</span>
-        </a>
-        <a routerLink="/">
-          <i class="material-icons">move_to_inbox</i>
-          <span>Movimentos 2º grau</span>
-        </a>
-      </mat-expansion-panel>
-    </mat-tab>
+  <div class="menu-stashded-administrativo">
+    <ng-template mat-tab-label>
+      <i class="icon icon-acoes-permitidas"></i>
+    </ng-template>
 
-
-    <mat-tab label="administrativo">
-      <ng-template mat-tab-label>
-        <i class="icon icon-acoes-permitidas"></i>
-      </ng-template>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon matTooltip="Órgão" matTooltipPosition="right">store</mat-icon>
-            <span>Órgão</span>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <a routerLink="/">
-          <mat-icon matTooltip="Associar Órgão ao Usuário" matTooltipPosition="right">vpn_key</mat-icon>
-          <span>Associar Órgão ao Usuário</span>
-        </a>
-        <a routerLink="/">
-          <mat-icon matTooltip="Associar promotoria ao usuário" matTooltipPosition="right">vpn_key</mat-icon>
-          <span>Associar promotoria ao usuário</span>
-        </a>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon matTooltip="Usuário" matTooltipPosition="right">account_box</mat-icon>
-            <span>Usuário</span>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <a routerLink="/">
-          <mat-icon matTooltip="Associar usuário à procuradoria" matTooltipPosition="right">vpn_key</mat-icon>
-          <span>Associar usuário à procuradoria</span>
-        </a>
-        <a routerLink="/">
-          <mat-icon matTooltip="Associar usuário à promotoria" matTooltipPosition="right">vpn_key</mat-icon>
-          <span>Associar usuário à promotoria</span>
-        </a>
-      </mat-expansion-panel>
-
-    </mat-tab>
-
-
-  </mat-tab-group>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon matTooltip="Órgão" matTooltipPosition="right">store</mat-icon>
+          <!--<span>Órgão</span>-->
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a routerLink="/">
+        <mat-icon matTooltip="Associar Órgão ao Usuário" matTooltipPosition="right">vpn_key</mat-icon>
+        <!--<span>Associar Órgão ao Usuário</span>-->
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Associar promotoria ao usuário" matTooltipPosition="right">vpn_key</mat-icon>
+        <!--<span>Associar promotoria ao usuário</span>-->
+      </a>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon matTooltip="Usuário" matTooltipPosition="right">account_box</mat-icon>
+          <!--<span>Usuário</span>-->
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a routerLink="/">
+        <mat-icon matTooltip="Associar usuário à procuradoria" matTooltipPosition="right">vpn_key</mat-icon>
+        <!--<span>Associar usuário à procuradoria</span>-->
+      </a>
+      <a routerLink="/">
+        <mat-icon matTooltip="Associar usuário à promotoria" matTooltipPosition="right">vpn_key</mat-icon>
+        <!--<span>Associar usuário à promotoria</span>-->
+      </a>
+    </mat-expansion-panel>
+  </div>
 
 
 </div>

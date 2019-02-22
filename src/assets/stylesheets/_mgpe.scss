@@ -7,6 +7,23 @@ html, body {
   padding: 0;
 }
 
+.mdl-layout.normal > #sidebar > app-navbar-stashed {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.mdl-layout.stashed > #sidebar > app-navbar-stashed {
+  .mat-expansion-panel-header {
+    padding: 0 24px!important;
+  }
+
+  .mat-expansion-panel-body > a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .mdl-layout.stashed {
   & > #content {
     margin-left: 100px !important;
@@ -19,10 +36,13 @@ html, body {
     transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
   }
   & > #sidebar > app-navbar-stashed {
-    /*transform: translate3d(-100%, 0, 0);
-    visibility: visible;*/
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19)
   }
 }
+
+
 
 #content {
   min-height: 100%;
@@ -95,6 +115,7 @@ html, body {
       display: flex;
       justify-content: space-between;
 
+      .hamburger { padding: 0;}
       .hamburger, .notification {
         button {
           color: white;
@@ -105,10 +126,9 @@ html, body {
   }
 
 
-  app-navbar > div > app-menu {
+  app-navbar > div > app-menu, app-navbar-stashed  {
     background: $mp-gray-0;
     background: $mp-dark-gray-linear-gradient;
-
     min-width: 100%;
 
     .mat-expansion-panel a i {
@@ -186,7 +206,6 @@ html, body {
       color: rgba(255, 255, 255, 0.87) !important;
     }
   }
-
 }
 
 
