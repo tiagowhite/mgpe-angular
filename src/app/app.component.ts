@@ -9,12 +9,13 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('navbarState', [
       state('normal', style({
-        transform: 'translate3d(0, 0, 0)'
+        transform: 'translate3d(0, 0, 0)',
+        opacity: 1
       })),
       state('stashed', style({
         transform: 'translate3d(-100%, 0, 0)',
-        visibility: 'hidden',
-        display: 'none'
+        opacity: 0
+
       })),
       transition('normal <=> stashed', animate('300ms cubic-bezier(0.895, 0.03, 0.685, 0.22)'))
     ])
