@@ -9,19 +9,30 @@ html, body {
 
 .mdl-layout.normal > #sidebar > app-navbar-stashed {
   opacity: 0;
-  visibility: hidden;
   transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .mdl-layout.stashed > #sidebar > app-navbar-stashed {
   .mat-expansion-panel-header {
-    padding: 0 24px!important;
+    padding: 0 24px !important;
   }
 
   .mat-expansion-panel-body > a {
     display: flex;
     justify-content: center;
   }
+
+  .navbar-stashed > app-profile {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5em;
+    > div { color: #fff;  margin-bottom: 10px; }
+    > .hamburger { padding: 0; }
+  }
+
 }
 
 .mdl-layout.stashed {
@@ -35,13 +46,13 @@ html, body {
     animation-delay: 2s;
     transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
   }
+
   & > #sidebar > app-navbar-stashed {
     opacity: 1;
     visibility: visible;
     transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19)
   }
 }
-
 
 
 #content {
@@ -115,7 +126,10 @@ html, body {
       display: flex;
       justify-content: space-between;
 
-      .hamburger { padding: 0;}
+      .hamburger {
+        padding: 0;
+      }
+
       .hamburger, .notification {
         button {
           color: white;
@@ -123,10 +137,13 @@ html, body {
       }
     }
 
+    .mdl-layout.stashed app-profile {
+      margin-top: 2.5em;
+    }
   }
 
 
-  app-navbar > div > app-menu, app-navbar-stashed  {
+  app-navbar > div > app-menu, app-navbar-stashed {
     background: $mp-gray-0;
     background: $mp-dark-gray-linear-gradient;
     min-width: 100%;

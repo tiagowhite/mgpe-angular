@@ -21,7 +21,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
 
   message: boolean;
   state: string;
@@ -34,10 +34,6 @@ export class AppComponent implements OnInit, OnDestroy {
       this.message = message;
       this.state = this.message ? 'stashed' : 'normal';
     });
-  }
-
-  ngOnDestroy() {
-    this.navbarService.currentMessage.subscribe();
   }
 
 
