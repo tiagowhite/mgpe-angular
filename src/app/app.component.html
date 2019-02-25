@@ -1,9 +1,13 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer" [ngClass]="state">
-  <aside id="sidebar" class="mdl-layout__drawer">
-    <app-navbar [@navbarState]="state"></app-navbar>
-    <app-navbar-stashed></app-navbar-stashed>
-  </aside>
-  <main id="content" class="mdl-layout__content">
-    <router-outlet></router-outlet>
-  </main>
+<div class="container-fluid" [ngClass]="state">
+  <div class="row">
+    <nav id="sidebar" class="d-none d-md-block"
+         [ngClass]="{'col-md-2': state === 'normal', 'col-md-1': state === 'stashed' }">
+      <app-navbar [@navbarState]="state"></app-navbar>
+      <app-navbar-stashed></app-navbar-stashed>
+    </nav>
+    <main id="content" class="ml-sm-auto px-4"
+          [ngClass]="{'col-md-10 col-lg-10': state === 'normal', 'col-md-11 col-lg-11': state === 'stashed' }">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavbarService} from './core/services/navbar.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
@@ -13,14 +13,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         opacity: 1
       })),
       state('stashed', style({
-        transform: 'translate3d(-100%, 0, 0)',
-        opacity: 0
-
+        transform: 'translate3d(-350px, 0, 0)',
+        opacity: 0,
+        visibility: 'hidden'
       })),
       transition('normal <=> stashed', animate('300ms cubic-bezier(0.895, 0.03, 0.685, 0.22)'))
     ])
   ]
 })
+
 
 export class AppComponent implements OnInit {
 

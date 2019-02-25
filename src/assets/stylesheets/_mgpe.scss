@@ -7,12 +7,26 @@ html, body {
   padding: 0;
 }
 
-.mdl-layout.normal > #sidebar > app-navbar-stashed {
-  opacity: 0;
-  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+.container-fluid > .row > #sidebar > app-navbar {
+  position: absolute;
 }
 
-.mdl-layout.stashed > #sidebar > app-navbar-stashed {
+.container-fluid.normal > .row > #sidebar > app-navbar-stashed > .navbar-stashed {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms, visibility 400ms;
+
+}
+
+.container-fluid.stashed > .row > #sidebar > app-navbar-stashed > .navbar-stashed  {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 300ms, visibility 100ms;
+
+}
+
+.container-fluid.stashed > .row > #sidebar > app-navbar-stashed {
   .mat-expansion-panel-header {
     padding: 0 24px !important;
   }
@@ -29,30 +43,19 @@ html, body {
     align-items: center;
     flex-direction: column;
     margin-top: 1.5em;
-    > div { color: #fff;  margin-bottom: 10px; }
-    > .hamburger { padding: 0; }
-  }
 
-}
+    > div {
+      color: #fff;
+      margin-bottom: 10px;
+    }
 
-.mdl-layout.stashed {
-  & > #content {
-    margin-left: 100px !important;
-  }
-
-  & > #sidebar {
-    width: 100px;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-  }
-
-  & > #sidebar > app-navbar-stashed {
-    opacity: 1;
-    visibility: visible;
-    transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    > .hamburger {
+      padding: 0;
+    }
   }
 }
+
+
 
 
 #content {
@@ -60,18 +63,21 @@ html, body {
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-left: 320px;
   background: $mp-light-blue-0;
 }
 
 
 #sidebar {
-  width: 320px;
-  padding: 0;
-  min-height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
   overflow: visible;
   overflow-y: auto;
   background: $mp-gray-0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 
   &::-webkit-scrollbar {
     width: .3em;
@@ -137,7 +143,7 @@ html, body {
       }
     }
 
-    .mdl-layout.stashed app-profile {
+    .container-fluid.stashed app-profile {
       margin-top: 2.5em;
     }
   }
